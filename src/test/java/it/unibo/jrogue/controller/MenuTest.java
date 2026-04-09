@@ -19,11 +19,6 @@ final class MenuTest {
     @BeforeEach
     @SuppressWarnings("checkstyle:EmptyCatchBlock")
     void setUp() {
-        try {
-            Platform.startup(() -> { });
-        } catch (final IllegalStateException ignored) {
-            //JavaFX is already loaded so ignore it
-        }
         final BaseController base = new BaseController(new GameState());
         menuController = new MenuController(base);
         pauseController = new PauseGameController(base);
